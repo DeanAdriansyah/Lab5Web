@@ -231,6 +231,10 @@ class Database
 ?>
 ```
 
+
+
+
+---
 # <p align="center">Tugas</p>
 Implementasikan konsep modularisasi pada kode program pada praktukum sebelumnya dengan
 menggunakan class library untuk _`form`_ dan _`database connection`_.
@@ -281,6 +285,7 @@ $routes = new Route($url);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="DeanAdrian">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/93472471?s=400&u=f3dc49a0d0a24aba75623cecd237c3dd9a4b6627&v=4" />
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 
   <!-- css -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -288,7 +293,7 @@ $routes = new Route($url);
 </head>
 
 <body class="dark:bg-slate-900 dark:text-white" style="background-color:rgb(135, 206, 235,0.5);">
-  <nav class="bg-white border-gray-200 dark:bg-gray-900" style="background-color:rgb(135, 206, 235);">
+  <nav class="bg-white border-gray-200 dark:bg-gray-900" style="background-color:RGBA( 0, 0, 255, 0.7 ); color:white;">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="<?= $moduleName == 'update' ? '../home' : ' home' ?>" class="flex items-center cursor-pointer">
         <img src="https://avatars.githubusercontent.com/u/93472471?s=400&u=f3dc49a0d0a24aba75623cecd237c3dd9a4b6627&v=4" class="h-8 mr-3 rounded-full" alt="Flowbite Logo" />
@@ -301,15 +306,15 @@ $routes = new Route($url);
         </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" style="background-color:rgb(135, 206, 235);">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <a href="<?= $moduleName == 'update' ? '../home' : ' home' ?>" class="<?= $moduleName == 'home' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>" aria-current="page">Home</a>
+            <a href="<?= $moduleName == 'update' ? '../home' : ' home' ?>" class="<?= $moduleName == 'home' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>"  style="color:white;" aria-current="page">Home</a>
           </li>
           <li>
-            <a href="<?= $moduleName == 'update' ? '../contact' : ' contact' ?>" class="<?= $moduleName == 'contact' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>">Contact</a>
+            <a href="<?= $moduleName == 'update' ? '../contact' : ' contact' ?>" class="<?= $moduleName == 'contact' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>" style="color:white;">Contact</a>
           </li>
           <li>
-            <a href="<?= $moduleName == 'update' ? '../about' : ' about' ?>" class="<?= $moduleName == 'about' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>">About</a>
+            <a href="<?= $moduleName == 'update' ? '../about' : ' about' ?>" class="<?= $moduleName == 'about' || $moduleName == '' ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' ?>" style="color:white;">About</a>
           </li>
         </ul>
       </div>
@@ -393,11 +398,13 @@ if (!$data) {
   header('Location: ../error');
 }
 
+echo "<div>";
 $form = new Form("", "update");
 $form->addField("txtnim", "Nim", $data["nim"]);
 $form->addField("txtnama", "Nama", $data["nama"]);
 $form->addField("txtkelas", "Kelas", $data["kelas"]);
 $form->displayForm();
+echo "</div>";
 ```
 
 ### Buat file baru dengan nama _`config.php`_ di dalam folder _`requires`_.
@@ -555,7 +562,7 @@ class Form
     echo "<h5 class='text-xl font-medium text-gray-900 dark:text-white capitalize'>" . $url . " Data</h5>";
     for ($j = 0; $j < count($this->fields); $j++) {
       echo "<div><label for='nama' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>" . $this->fields[$j]['label'] . "</label>";
-      echo "<input type='text' value='" . $this->fields[$j]['value'] . "' name='" . $this->fields[$j]['name'] . "' class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='" . $this->fields[$j]['label'] . "' required>
+      echo "<input type='text' value='" . $this->fields[$j]['value'] . "' name='" . $this->fields[$j]['name'] . "' class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' style='background-color:RGBA( 224, 255, 255, 1 );' placeholder='" . $this->fields[$j]['label'] . "' required>
     </div>";
     }
     echo "<button type='submit' name='" . $this->submit . "' class='w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Save</button>";
@@ -600,7 +607,7 @@ class Form
 
 ### Buat file baru dengan nama _`create.php`_ di dalam folder _`views`_.
 ```
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 m-auto">
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 m-auto" style="background-color:rgb(135, 206, 235,0.6);">
   <?php include_once "./includes/form_insert.php" ?>
 </div>
 ```
@@ -641,10 +648,11 @@ foreach ($results as $result) {
 }
 ?>
 
-<button type="button" onclick="window.location.href='create'" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" style="background-color:rgb(135, 206, 235);">Tambah Data</button>
+
+<button type="button" onclick="window.location.href='create'" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" style="background-color:RGBA( 0, 0, 255, 0.7 ); color:white;">Tambah Data</button>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" style="background-color:rgb(135, 206, 235);">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" style="background-color:RGBA( 65, 105, 225, 0.8 );">
       <tr>
         <th scope="col" class="px-6 py-3">
           No.
@@ -682,8 +690,8 @@ foreach ($results as $result) {
             <?= $row['kelas'] ?>
           </td>
           <td class="px-6 py-4 text-right flex gap-5">
-            <a href="update/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-            <a href="delete/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+            <button type="button" onclick="window.location.href='update/<?= $row['id'] ?>'" class="fa fa-coffee font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-3" style="background-color:RGBA( 0, 0, 255, 0.7 ); color:white;">Edit</button>
+            <button type="button" onclick="window.location.href='delete/<?= $row['id'] ?>'" class="font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-3" style="background-color:RGBA( 0, 0, 255, 0.7 ); color:white;">Delete</button>
           </td>
         </tr>
       <?php
@@ -692,14 +700,32 @@ foreach ($results as $result) {
     </tbody>
   </table>
 </div>
+
 ```
 
 ### Buat file baru dengan nama _`update.php`_ di dalam folder _`views`_.
 ```
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 m-auto">
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 m-auto" style="background-color:rgb(135, 206, 235,0.6);">
   <?php include_once "./includes/form_update.php" ?>
 </div>
 ```
+
+## Hasilnya,
+
+### Halaman HOME
+![menambahkan_gambar](README_img/home.png)
+
+### Halaman CONTACT
+![menambahkan_gambar](README_img/contact.png)
+
+### Halaman ABOUT
+![menambahkan_gambar](README_img/about.png)
+
+### Halaman Tambah Data
+![menambahkan_gambar](README_img/tambah.png)
+
+### Halaman Edit
+![menambahkan_gambar](README_img/edit.png)
 
 ---
 # <P align="center"> THANK YOU SO MUCH FOR YOUR ATTENTION!! SEE YOU SOON!!
